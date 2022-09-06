@@ -155,7 +155,47 @@ const states = [
 ];
 
 function App() {
-  return <div id="main"></div>;
+  return <div id="main">
+     <table>
+            <thead>
+            <tr>
+                <th>Name of State</th>
+                <th>Name of Cities</th>
+                <th>Name of Towm</th>
+            </tr>
+            </thead>
+            <tbody>
+            {
+                data.map((item)=>(
+                    
+                    <tr>
+                        <td>{item.name}</td>
+                        <td>
+                            {
+                                item.cities.map((item1)=>(
+                                    <tr>
+                                        <td>{item1.name}</td>
+                                        <td>
+                                            {
+                                              item1.towns.map((item2)=>(
+                                                <tr>
+                                                    <td>{item2.name}</td>
+                                                </tr>
+                                              ))  
+                                            }
+
+                                        </td>
+                                    </tr>
+                                ))
+                            }
+                        </td>
+                       
+                    </tr>
+                ))
+            }
+            </tbody>
+        </table>
+    </div>;
 }
 
 export default App;
