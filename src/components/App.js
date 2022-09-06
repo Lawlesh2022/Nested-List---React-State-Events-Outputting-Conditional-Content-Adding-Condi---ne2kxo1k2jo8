@@ -155,6 +155,7 @@ const states = [
 ];
 
 function App() {
+  const [data, setData] = useState(states)
   return <div id="main">
      <table>
             <thead>
