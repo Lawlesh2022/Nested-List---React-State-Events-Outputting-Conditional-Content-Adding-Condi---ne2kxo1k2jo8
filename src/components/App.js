@@ -167,10 +167,10 @@ function App() {
             </thead>
             <tbody>
             {
-                data.map((item)=>(
+                data.map((item, i)=>(
                     
                     <tr>
-                        <td>{item.name}</td>
+                        <td>state{i+1}.{item.name}</td>
                         <td>
                             {
                                 item.cities.map((item1)=>(
